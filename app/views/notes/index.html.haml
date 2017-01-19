@@ -3,7 +3,13 @@
   =@user.first_name
 %p Find me in app/views/notes/index.html.erb
 -@notes.each do |note|
-  %p=note.title
-  %p=note.body
+  %h3
+    =link_to note.title, note_path(note)
+  %p
+    =truncate(note.body, length: 10)
+  %p
+    =time_ago_in_words(note.created_at)
+
+= link_to "new note", new_note_path
 = link_to "sign out", destroy_user_session_path, method: :delete
 = link_to "sign in", new_user_session_path

@@ -1,4 +1,9 @@
-%h2 Notes#index
+%h2
+  Notes by
+  =@user.first_name
 %p Find me in app/views/notes/index.html.erb
+-@notes.each do |note|
+  %p=note.title
+  %p=note.body
 = link_to "sign out", destroy_user_session_path, method: :delete
 = link_to "sign in", new_user_session_path

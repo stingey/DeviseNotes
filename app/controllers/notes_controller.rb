@@ -1,7 +1,6 @@
 class NotesController < ApplicationController
   # before_action :authenticate_user!
   def index
-    puts "\n\n\n#{current_user == nil}\n\n\n"
     @user = current_user
     @notes = Note.all
     @notesuser = Note.where(user_id: current_user)
@@ -20,7 +19,6 @@ class NotesController < ApplicationController
     end
   end
   def show
-    # puts "\n\n\n#{current_user.id}\n\n\n"
     @note = Note.find(params[:id])
     @user = User.find(@note.user_id)
   end

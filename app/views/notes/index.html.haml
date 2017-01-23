@@ -2,8 +2,6 @@
   All Notes
 -@notes.each do |note|
   %h3
-    -# =link_to note.title ,current_user.id != note.user_id || current_user = nil ? mynote_path(note) : note_path(note)
-    -# =link_to note.title ,current_user = nil ? mynote_path(note) : note_path(note)
     -if current_user == nil
       =link_to note.title, note_path(note)
     -elsif current_user.id == note.user_id

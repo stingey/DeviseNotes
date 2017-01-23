@@ -1,2 +1,12 @@
 %h2
+  Notes by
+  =@user.first_name
+
+%h3
   =@note.title
+%p
+  =@note.body
+%h3
+  Comments
+%button
+  =link_to "home", root_path

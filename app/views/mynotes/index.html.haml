@@ -1,0 +1,12 @@
+%h2
+  Notes for
+  =@user.first_name
+
+-@mynotes.each do |note|
+  %h3
+    =link_to note.title, mynote_path(note)
+  %p
+    =truncate(note.body, length: 10)
+  %p
+    =time_ago_in_words(note.created_at)
+=link_to "all notes", notes_path

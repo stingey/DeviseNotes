@@ -19,10 +19,5 @@
     </em>
 %button
   =link_to "home", root_path
-= form_for [@note, @note.comments.build] do |f|
-  %p
-    =f.label 'comment'
-  %p
-    =f.text_area :body
-  %p
-    =f.submit 'comment'
+-if user_signed_in?
+  =render 'comment'

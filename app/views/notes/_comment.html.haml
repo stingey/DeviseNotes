@@ -1,0 +1,7 @@
+= form_for [@note, @note.comments.build] do |f|
+  %p
+    =f.label 'comment'
+  %p
+    =f.text_area :body
+  %p
+    =f.submit 'comment'

@@ -1,0 +1,21 @@
+nav{
+  width: 100%;
+  background-color: grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  line-height: 20px;
+  div{
+    float:right;
+    font-size: 15px;
+    padding: 0px 10px;
+  }
+}
+
+.right{
+  float: right;
+}
+header{
+  float: left;
+}

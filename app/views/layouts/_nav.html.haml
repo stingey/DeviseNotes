@@ -1,0 +1,8 @@
+%h2.Main
+  =link_to "Spenser Note", notes_path
+  -if user_signed_in?
+    .right= link_to "sign out", destroy_user_session_path, method: :delete
+    .right= link_to "new note", new_note_path
+    .right= link_to "my notes", mynotes_path
+  -else
+    .right= link_to "sign in", new_user_session_path

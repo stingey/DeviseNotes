@@ -1,0 +1,46 @@
+*{
+  font-family: verdana;
+}
+.login-form{
+  width: 310px;
+  margin: auto;
+  h2{
+    text-align: center;
+  }
+}
+
+.field{
+  width: 310px;
+  height: 40px;
+  // background-color: yellow;
+  // border: solid black 1px;
+  display: table;
+  padding: 2px 0px;
+  *{
+    font-size: 11px;
+  }
+  .login-box{
+    width: 304px;
+    height: 40px;
+    display: table-cell;
+  }
+  .sign-up{
+    width: 310px;
+    display: table-cell;
+    height: 40px;
+    background-color: #eeeeee;
+    border: black solid 1px;
+  }
+  .login-link{
+    color: black;
+    width: 300px;
+    display: table-cell;
+    text-decoration: none;
+    border: solid 1px black;
+    padding: 0px 40px 0px 41px;
+    height: 40px;
+    background-color: #eeeeee;
+    vertical-align: middle;
+    text-align: center;
+  }
+}

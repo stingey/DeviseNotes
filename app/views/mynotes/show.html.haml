@@ -4,6 +4,7 @@
 
 %p
   =@note.body
+= render 'layouts/comment'
 
 = link_to "edit note", edit_mynote_path
 = link_to "delete", mynote_path, method: :delete

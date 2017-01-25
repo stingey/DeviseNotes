@@ -1,0 +1,26 @@
+= provide(:title, "Sign Up")
+.login-form
+  %h2 Sign up
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = devise_error_messages!
+    .field
+
+      = f.text_field :first_name, autofocus: true, class: "login-box", placeholder: "First name"
+    .field
+      = f.text_field :last_name, class: "login-box", placeholder: "Last name"
+    .field
+
+      = f.email_field :email, class: "login-box", placeholder: "Email"
+    .field
+      - if @minimum_password_length
+        -# %em
+        -#   (#{@minimum_password_length} characters minimum)
+
+      = f.password_field :password, autocomplete: "off", class: "login-box", placeholder: "Password, #{@minimum_password_length} characters minimum"
+    .field
+
+      = f.password_field :password_confirmation, autocomplete: "off", class: "login-box", placeholder: "Confirm"
+    .field
+      .actions
+        = f.submit "Sign up", class: 'sign-up'
+    = render "devise/shared/links"

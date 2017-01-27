@@ -1,8 +1,8 @@
 %h2.Main
   =link_to "Note Tracker", notes_path, class: 'header logo'
   -if user_signed_in?
-    .right= link_to "sign out", destroy_user_session_path, method: :delete, class: 'header'
-    .right= link_to "new note", new_note_path, class: 'header'
-    .right= link_to "my notes", mynotes_path, class: 'header'
+    .right= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'header'
+    .right= link_to "New Note", new_note_path, class: 'header'
+    .right= link_to "My Notes", mynotes_path, class: 'header'
   -else
-    .right= link_to "sign in", new_user_session_path, class: 'header'
+    .right= link_to "Log in", new_user_session_path, class: 'header'

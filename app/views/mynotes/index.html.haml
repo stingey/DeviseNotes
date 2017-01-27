@@ -4,10 +4,11 @@
   =@user.first_name
 
 -@mynotes.each do |note|
-  %h3
-    =link_to note.title, mynote_path(note)
-  %p
-    =truncate(note.body, length: 15)
-  %p
-    =time_ago_in_words(note.created_at)
-    ago
+  .the-note
+    %h3
+      =link_to note.title, mynote_path(note)
+    %p
+      =truncate(note.body, length: 45)
+    %p
+      =time_ago_in_words(note.created_at)
+      ago

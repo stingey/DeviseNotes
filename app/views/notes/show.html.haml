@@ -1,12 +1,12 @@
 %h2
-  Notes by
+  Note by
   =@user.first_name
 
 %h3
   =@note.title
 %p
   =@note.body
-%h3
+%h4
   Comments
 -@note.comments.each do |comment|
   %p
@@ -17,8 +17,7 @@
     = time_ago_in_words(comment.created_at)
     ago
     </em>
-%button
-  =link_to "home", root_path
+
 -if user_signed_in?
   =render 'layouts/comment'
 -else

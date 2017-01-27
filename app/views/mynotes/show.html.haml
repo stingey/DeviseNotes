@@ -1,9 +1,12 @@
 %h2
-  show for mynotes
+  My Note
+%h3
   =@note.title
-
 %p
   =@note.body
+%h4
+  Comments
+
 = render 'layouts/comment'
 
 = link_to "edit note", edit_mynote_path

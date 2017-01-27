@@ -6,7 +6,15 @@
   =@note.body
 %h4
   Comments
-
+-@note.comments.each do |comment|
+  %p
+    =comment.body
+    %br
+    <em>
+    ="-#{User.find(comment.user_id).first_name}"
+    = time_ago_in_words(comment.created_at)
+    ago
+    </em>
 = render 'layouts/comment'
 
 = link_to "edit note", edit_mynote_path

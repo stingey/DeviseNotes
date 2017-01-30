@@ -8,7 +8,28 @@ body{
   border: solid 1px black;
   margin: 2px 0px 2px 0px;
   padding: 0px 8px 0px 8px;
-  width: 350px;
+  width: 500px;
   background-color: #e6e6e6;
   border-radius: 5px;
+}
+.container1{
+  margin: auto;
+  width: 500px;
+}
+.center{
+  text-align: center;
+}
+.input-box{
+  width: 500px;
+  height: 28px;
+  font-size: 16px;
+  line-height: 28px;
+}
+.input-area{
+  width: 500px;
+  height: 100px;
+}
+.sign-in{
+  -webkit-appearance: textarea;
+  background-color: blue;
 }

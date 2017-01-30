@@ -1,24 +1,11 @@
-%h2
-  My Note
-%h3
-  =@note.title
-%p
-  =@note.body
-%h4
-  Comments
--@note.comments.each do |comment|
-  %p
-    =comment.body
-    %br
-    <em>
-    ="-#{User.find(comment.user_id).first_name}"
-    = time_ago_in_words(comment.created_at)
-    ago
-    </em>
-= render 'layouts/comment'
+.container1
+  %h2
+    My Note
+  = render 'layouts/showstuff'
+  = render 'layouts/comment'
 
-= link_to "edit note", edit_mynote_path
-= link_to "delete", mynote_path, method: :delete
-= link_to "back", root_path
-= link_to "my notes", mynotes_path
-= link_to "all notes", notes_path
+  = link_to "edit note", edit_mynote_path
+  = link_to "delete", mynote_path, method: :delete
+  = link_to "back", root_path
+  = link_to "my notes", mynotes_path
+  = link_to "all notes", notes_path

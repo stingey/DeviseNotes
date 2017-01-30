@@ -1,0 +1,17 @@
+%h3.center
+  =@note.title
+%p
+  =@note.body
+-if @note.comments.count < 1
+-else
+  %h4
+    Comments
+-@note.comments.each do |comment|
+  %p
+    =comment.body
+    %br
+    <em>
+    ="-#{User.find(comment.user_id).first_name}"
+    = time_ago_in_words(comment.created_at)
+    ago
+    </em>

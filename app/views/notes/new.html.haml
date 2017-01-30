@@ -1,16 +1,17 @@
 =provide(:title, "New Note")
-%h2
-  create new note for
-  =@user.first_name
-= form_for @note do |f|
-  %p
-    header
-    %br
-    = f.text_field :title
-  %p
-    note
-    %br
-    = f.text_area :body
-  = f.submit 'enter note'
+.container1
+  %h2
+    create new note for
+    =@user.first_name
+  = form_for @note do |f|
+    %p
+      header
+      %br
+      = f.text_field :title, class: "input-box"
+    %p
+      note
+      %br
+      = f.text_area :body, class: "input-area"
+    = f.submit 'enter note'
 
 = link_to "back", root_path

@@ -1,7 +1,11 @@
 = form_for [@note, @note.comments.build] do |f|
   %p
     =f.label 'comment'
-  %p
-    =f.text_area :body
+  -if @note.comments.count < 1
+    %p
+      =f.text_area :body, placeholder: "Be the first to comment!", class: "input-box"
+  -else
+    %p
+      =f.text_area :body, placeholder: "Add your comment here. Keep it civil!", class: "input-box"
   %p
     =f.submit 'comment'

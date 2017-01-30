@@ -1,26 +1,12 @@
-%h2
-  Note by
-  =@user.first_name
+.container1
+  %h2
+    Note by
+    =@user.first_name
+    =render 'layouts/showstuff'
 
-%h3
-  =@note.title
-%p
-  =@note.body
-%h4
-  Comments
--@note.comments.each do |comment|
-  %p
-    =comment.body
-    %br
-    <em>
-    ="-#{User.find(comment.user_id).first_name}"
-    = time_ago_in_words(comment.created_at)
-    ago
-    </em>
 
--if user_signed_in?
-  =render 'layouts/comment'
--else
-  %p
+  -if user_signed_in?
+    =render 'layouts/comment'
+  -else
     =link_to "Sign in", new_user_session_path
     to comment!

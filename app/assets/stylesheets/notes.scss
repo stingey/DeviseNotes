@@ -29,7 +29,20 @@ body{
   width: 500px;
   height: 100px;
 }
-.sign-in{
-  -webkit-appearance: textarea;
-  background-color: blue;
+
+.submit-btn{
+  background-color: grey;
+  border: none;
+  height: 30px;
+  width: 90px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin: 1px;
+  text-align: center;
+  .link{
+    text-decoration: none;
+    color: black;
+  }
 }

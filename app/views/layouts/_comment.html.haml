@@ -1,3 +1,17 @@
+-if @note.comments.count < 1
+-else
+  %h4
+    Comments
+-@note.comments.each do |comment|
+  %p
+    =comment.body
+    %br
+    <em>
+    ="-#{User.find(comment.user_id).first_name}"
+    = time_ago_in_words(comment.created_at)
+    ago
+    </em>
+
 = form_for [@note, @note.comments.build] do |f|
   %p
     =f.label 'comment'
@@ -8,4 +22,4 @@
     %p
       =f.text_area :body, placeholder: "Add your comment here. Keep it civil!", class: "input-box"
   %p
-    =f.submit 'comment'
+    =f.submit 'Post', class: 'submit-btn'

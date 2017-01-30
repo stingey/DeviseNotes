@@ -2,10 +2,5 @@
   %h2
     My Note
   = render 'layouts/showstuff'
+  = render 'layouts/cruds'
   = render 'layouts/comment'
-
-  = link_to "edit note", edit_mynote_path
-  = link_to "delete", mynote_path, method: :delete
-  = link_to "back", root_path
-  = link_to "my notes", mynotes_path
-  = link_to "all notes", notes_path

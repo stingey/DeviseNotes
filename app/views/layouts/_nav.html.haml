@@ -1,7 +1,9 @@
 %h2.Main
   =link_to "Note Tracker", notes_path, class: 'header logo'
+
   -if user_signed_in?
     .right= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'header'
+    %a{href: "https://sheltered-wildwood-53056.herokuapp.com/", class: 'header right', target:"_blank"} Star Wars
     .right= link_to "New Note", new_note_path, class: 'header'
     .right= link_to "My Notes", mynotes_path, class: 'header'
   -else

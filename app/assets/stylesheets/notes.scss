@@ -38,6 +38,23 @@ body{
   font-size: 15px;
   font-weight: bold;
   color: white;
+  float: right;
+  text-decoration: none;
+  margin: 1px;
+  text-align: center;
+
+}
+.link-to-btn{
+  line-height: 30px;
+}
+.cruds{
+  background-color: grey;
+  border: none;
+  height: 30px;
+  width: 90px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
   text-decoration: none;
   margin: 1px;
   text-align: center;

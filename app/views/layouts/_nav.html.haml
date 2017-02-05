@@ -1,10 +1,20 @@
-%h2.Main
-  =link_to "Note Tracker", notes_path, class: 'header logo'
+%nav
+  .header
+    =image_tag("note-4.png",class: 'logo')
+    =link_to "Note Tracker", notes_path, class: 'header'
 
   -if user_signed_in?
-    .right= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'header'
-    %a{href: "https://sheltered-wildwood-53056.herokuapp.com/", class: 'header right', target:"_blank"} Star Wars
-    .right= link_to "New Note", new_note_path, class: 'header'
-    .right= link_to "My Notes", mynotes_path, class: 'header'
+    %div= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'links'
+    %div
+      %a{href: "https://sheltered-wildwood-53056.herokuapp.com/", class: 'links', target:"_blank"} Star Wars
+    %div{:class => ("active" if current_page?(new_note_path))}
+      = link_to "New Note", new_note_path, class: 'links'
+    %div{:class => ("active" if current_page?(mynotes_path))}
+      = link_to "My Notes", mynotes_path, class: 'links'
+    %div{:class => ("active" if current_page?(notes_path))}
+      = link_to "All Notes", notes_path, class: 'links'
   -else
-    .right= link_to "Log in", new_user_session_path, class: 'header'
+    %div{:class => ("active" if current_page?(new_user_session_path))}
+      = link_to "Log in", new_user_session_path, class: 'links'
+    %div{:class => ("active" if current_page?(new_user_registration_path))}
+      = link_to "Sign up", new_user_registration_path, class: 'links'

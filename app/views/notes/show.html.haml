@@ -6,7 +6,9 @@
 
 
   -if user_signed_in?
-    =render 'layouts/comment'
+    =render 'layouts/comments'
+    =render 'layouts/comment_form'
   -else
+    =render 'layouts/comments'
     =link_to "Sign in", new_user_session_path
     to comment!

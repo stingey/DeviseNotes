@@ -1,0 +1,15 @@
+= form_for @note do |f|
+  %p
+    header
+    %br
+    = f.text_field :title, class: "input-box"
+  %p
+    note
+    %br
+    = f.text_area :body, class: "input-area"
+    -if current_page?(new_note_path)
+      = f.submit 'Post', class: "submit-btn"
+    -elsif current_page?(edit_mynote_path)
+      = f.submit 'Edit', class: "submit-btn"
+
+    = link_to "Back", root_path, class: "submit-btn link-to-btn"

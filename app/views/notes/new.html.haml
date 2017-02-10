@@ -3,14 +3,4 @@
   %h2
     create new note for
     =@user.first_name
-  = form_for @note do |f|
-    %p
-      header
-      %br
-      = f.text_field :title, class: "input-box"
-    %p
-      note
-      %br
-      = f.text_area :body, class: "input-area"
-      = f.submit 'Post', class: "submit-btn"
-      = link_to "Back", root_path, class: "submit-btn link-to-btn"
+  =render 'layouts/form'

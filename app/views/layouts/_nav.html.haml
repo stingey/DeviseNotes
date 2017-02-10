@@ -5,8 +5,6 @@
 
   -if user_signed_in?
     %div= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'links'
-    %div
-      %a{href: "https://sheltered-wildwood-53056.herokuapp.com/", class: 'links', target:"_blank"} Star Wars
     %div{:class => ("active" if current_page?(new_note_path))}
       = link_to "New Note", new_note_path, class: 'links'
     %div{:class => ("active" if current_page?(mynotes_path))}
@@ -18,3 +16,5 @@
       = link_to "Log in", new_user_session_path, class: 'links'
     %div{:class => ("active" if current_page?(new_user_registration_path))}
       = link_to "Sign up", new_user_registration_path, class: 'links'
+    %div{:class => ("active" if current_page?(notes_path) || current_page?(root_path))}
+      = link_to "All Notes", notes_path, class: 'links'

@@ -1,17 +1,6 @@
-%h2
-  edit note for
-  =@user.first_name
-= form_for @note, url: mynote_path do |f|
-  %p
-    header
-    %br
-    = f.text_field :title
-  %p
-    note
-    %br
-    = f.text_area :body
-  = f.submit 'edit note'
-
-= link_to "back", root_path
-= link_to "my notes", mynotes_path
-= link_to "all notes", notes_path
+=provide(:title, 'Edit Note')
+.container1
+  %h2
+    edit note for
+    =@user.first_name
+  =render 'layouts/form'

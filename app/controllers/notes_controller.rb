@@ -9,7 +9,11 @@ class NotesController < ApplicationController
     @user = current_user
     @note = current_user.notes.build
   end
-
+  def update
+    @note = Note.find(params[:id])
+    @note.update(note_params)
+    redirect_to mynote_path(@note)
+  end
   def create
     @note = current_user.notes.build(note_params)
     if @note.save
@@ -23,7 +27,7 @@ class NotesController < ApplicationController
     @user = User.find(@note.user_id)
   end
   def about
-    
+
   end
 
   private

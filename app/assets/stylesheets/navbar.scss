@@ -34,10 +34,13 @@ nav{
     padding-right: 8px;
     padding-left: 8px;
     transition: line-height .3s;
+    text-decoration: none;
+    color: black;
     &.small{
-      line-height: 40px;
+      // line-height: 40px;
     }
     &.active{
+      color: white;
       &:hover{background-color: #404040;
       }
     }
@@ -48,6 +51,9 @@ nav{
   &.small{
     height: 40px;
     line-height: 40px;
+    .taz{
+      line-height: 40px;
+    }
     .header{
       text-decoration: none;
       color: black;
@@ -59,15 +65,10 @@ nav{
         padding: 0px;
       }
       &:hover{
-        background-color: #a6a6a6;
+        // background-color: #a6a6a6;
       }
     }
   }
-}
-
-.links{
-  text-decoration: none;
-  color: black;
 }
 .active{
   background-color: black;

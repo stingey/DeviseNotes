@@ -3,21 +3,29 @@
     .header
       =image_tag("note-4.png",class: 'logo')
       .title Note Tracker
-      -# =link_to "Note Tracker", notes_path, class: 'header'
       .drop-down A Rails app by spenser tingey
 
   -if user_signed_in?
-    .taz= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'links'
-    .taz{:class => ("active" if current_page?(new_note_path))}
-      = link_to "New Note", new_note_path, class: 'links'
-    .taz{:class => ("active" if current_page?(mynotes_path))}
-      = link_to "My Notes", mynotes_path, class: 'links'
-    .taz{:class => ("active" if current_page?(notes_path) || current_page?(root_path))}
-      = link_to "All Notes", notes_path, class: 'links'
+
+    = link_to destroy_user_session_path, method: :delete do
+      .taz
+        Sign Out
+    = link_to new_note_path do
+      .taz{:class => ("active" if current_page?(new_note_path))}
+        New Note
+    = link_to mynotes_path do
+      .taz{:class => ("active" if current_page?(mynotes_path))}
+        My Notes
+    = link_to notes_path do
+      .taz{:class => ("active" if current_page?(notes_path) || current_page?(root_path))}
+        All Notes
   -else
-    .taz{:class => ("active" if current_page?(new_user_session_path))}
-      = link_to "Log in", new_user_session_path, class: 'links'
-    .taz{:class => ("active" if current_page?(new_user_registration_path))}
-      = link_to "Sign up", new_user_registration_path, class: 'links'
-    .taz{:class => ("active" if current_page?(notes_path) || current_page?(root_path))}
-      = link_to "All Notes", notes_path, class: 'links'
+    = link_to new_user_session_path do
+      .taz{:class => ("active" if current_page?(new_user_session_path))}
+        Log in
+    = link_to new_user_registration_path do
+      .taz{:class => ("active" if current_page?(new_user_registration_path))}
+        Sign up
+    = link_to notes_path do
+      .taz{:class => ("active" if current_page?(notes_path) || current_page?(root_path))}
+        All Notes

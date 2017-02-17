@@ -3,12 +3,4 @@
   %h2.center
     My Notes
 
-  -@mynotes.each do |note|
-    .the-note
-      %h3
-        =link_to note.title, mynote_path(note)
-      %p
-        =truncate(note.body, length: 45)
-      %p
-        =time_ago_in_words(note.created_at)
-        ago
+  =render 'layouts/mynotes'

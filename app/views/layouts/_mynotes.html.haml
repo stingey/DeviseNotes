@@ -1,5 +1,5 @@
 -@mynotes.each do |note|
-  =link_to mynote_path(note) do
+  =link_to mynote_path(note),class: "note-tag" do
     .the-note
       %h3
         =note.title

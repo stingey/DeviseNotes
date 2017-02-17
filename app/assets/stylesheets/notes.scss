@@ -8,19 +8,36 @@ body{
   border: solid 1px black;
   margin: 2px 0px 2px 0px;
   padding: 0px 8px 0px 8px;
-  width: 500px;
+  width: 400px;
   background-color: #e6e6e6;
   border-radius: 5px;
   color: black;
 }
 .container1{
   margin: auto;
-  width: 500px;
+  margin-top: 40px;
+  // width: 400px;
+  float: left;
+  padding-bottom: 50px;
 }
-.center{
+.header-div{
+  top: 75px;
+  padding: 10px 8px 0px 8px;
+  font-size: 22px;
+  font-weight: bold;
+  width: 400px;
+  border: 1px solid black;
   text-align: center;
+  height: 40px;
+  background-color: #e6e6e6;
+  position: fixed;
+  transition: all .3s;
+  &.small{
+    top: 40px;
+  }
+
 }
-a:link{
+.note-tag{
   text-decoration: none;
 }
 .input-box{

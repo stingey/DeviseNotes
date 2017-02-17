@@ -1,6 +1,6 @@
 -@notes.each do |note|
   -if current_user == nil
-    =link_to note_path(note) do
+    =link_to note_path(note), class: "note-tag" do
       .the-note
         %h3
           =note.title

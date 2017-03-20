@@ -6,6 +6,7 @@ class MynotesController < ApplicationController
   def show
     @user = current_user
     @note = Note.find(params[:id])
+    @mynotes = Note.where(user_id: current_user)
   end
   def edit
     @user = current_user

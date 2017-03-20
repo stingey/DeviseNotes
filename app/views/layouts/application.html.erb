@@ -11,8 +11,10 @@
 
   <body>
     <%= render 'layouts/nav'%>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class = 'login-alerts'>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>

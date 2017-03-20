@@ -3,8 +3,4 @@
 %button.cruds
   = link_to "delete", mynote_path, method: :delete, class: "link"
 %button.cruds
-  = link_to "back", root_path, class: "link"
-%button.cruds
-  = link_to "my notes", mynotes_path, class: "link"
-%button.cruds
-  = link_to "all notes", notes_path, class: "link"
+  = link_to "back", :back, class: "link"

@@ -1,7 +1,7 @@
 -@mynotes.each do |note|
   =link_to mynote_path(note),class: "note-tag" do
     .the-note
-      %h3
+      %h3.center
         =note.title
       %p
         =truncate(note.body, length: 45)

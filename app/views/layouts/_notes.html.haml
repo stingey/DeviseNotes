@@ -2,7 +2,7 @@
   -if current_user == nil
     =link_to note_path(note), class: "note-tag" do
       .the-note
-        %h3
+        %h3.center
           =note.title
         %p
           =truncate(note.body, length: 45)
@@ -11,9 +11,9 @@
           ago by
           =User.find(note.user_id).first_name
   -elsif current_user.id == note.user_id
-    =link_to mynote_path(note) do
+    =link_to mynote_path(note), class: "note-tag" do
       .the-note
-        %h3
+        %h3.center
           =note.title
         %p
           =truncate(note.body, length: 45)
@@ -22,9 +22,9 @@
           ago by
           =User.find(note.user_id).first_name
   -else
-    =link_to note_path(note) do
+    =link_to note_path(note), class: "note-tag" do
       .the-note
-        %h3
+        %h3.center
           =note.title
         %p
           =truncate(note.body, length: 45)

@@ -25,6 +25,7 @@ class NotesController < ApplicationController
   def show
     @note = Note.find(params[:id])
     @user = User.find(@note.user_id)
+    @notes = Note.all
   end
   def about
 

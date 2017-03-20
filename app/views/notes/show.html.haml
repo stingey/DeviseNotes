@@ -1,5 +1,9 @@
+.header-div
+  All Notes
 .container1
-  %h2
+  =render 'layouts/notes'
+.container2
+  %h2.center
     Note by
     =@user.first_name
     =render 'layouts/showstuff'

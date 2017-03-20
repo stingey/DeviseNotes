@@ -1,38 +1,48 @@
 // Place all the styles related to the Notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$light-gray: #e6e6e6;
 body{
   margin-top: 90px;
 }
 .the-note{
-  border: solid 1px black;
-  margin: 2px 0px 2px 0px;
-  padding: 0px 8px 0px 8px;
-  width: 400px;
-  background-color: #e6e6e6;
-  border-radius: 5px;
+  // margin-left: 10px;
+  padding: 0px 0px 0px 0px;
+  width: 100%;
   color: black;
+  border-top: solid 1px $light-gray;
+}
+.center{
+  text-align: center;
 }
 .container1{
+  padding: 0px 0px 50px 0px;
+  margin-left: 15px;
+  margin-top: 40px;
+  width: 30%;
+  float: left;
+  border-right: 1px solid $light-gray;
+}
+.container2{
   margin: auto;
   margin-top: 40px;
-  // width: 400px;
-  float: left;
+  width: 33%;
   padding-bottom: 50px;
 }
 .header-div{
+  margin-left: 14px;
   top: 75px;
-  padding: 10px 8px 0px 8px;
+  padding: 10px 0px 0px 5px;
   font-size: 22px;
   font-weight: bold;
-  width: 400px;
-  border: 1px solid black;
+  width: 30%;
   text-align: center;
   height: 40px;
-  background-color: #e6e6e6;
   position: fixed;
   transition: all .3s;
+  left: 0;
   &.small{
+    background-color: $light-gray;
     top: 40px;
   }
 
@@ -41,7 +51,7 @@ body{
   text-decoration: none;
 }
 .input-box{
-  width: 500px;
+  width: 100%;
   height: 28px;
   font-size: 16px;
   line-height: 28px;
@@ -83,4 +93,7 @@ body{
     text-decoration: none;
     color: black;
   }
+}
+.login-alerts{
+  float:right;
 }
